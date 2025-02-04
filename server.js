@@ -39,8 +39,9 @@ app.use("/updateProfile",updateRouter)
 app.use("/deleteProfile",deleteRouter);
 
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(process.env.PORT || 2019, () => {
+  console.log("Server running on port 2019");
+});
 
 app.get("*",(req,res)=>{
   res.sendFile("./client/build/index.html");  //render.com
