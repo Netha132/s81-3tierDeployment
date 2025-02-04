@@ -22,7 +22,7 @@ function Profile() {
 
     
       <div className="profilePicDiv">
-        <img className="profileImg" src={`http://localhost:2019/${userDetails.profile}`} alt=""></img>
+        <img className="profileImg" src={`/${userDetails.profile}`} alt=""></img>
       </div>
 
       </div>

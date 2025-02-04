@@ -24,7 +24,7 @@ function EditProfile() {
 
   useEffect(() => {
     console.log("User Details:", userDetails); // Debugging
-    axios.defaults.baseURL = "http://localhost:2019";
+    axios.defaults.baseURL = "";
 
     axios.defaults.headers.common["Authorization"] =
       localStorage.getItem("token");
@@ -35,7 +35,7 @@ function EditProfile() {
       genderInputRef.current.value = userDetails.gender || "";
       emailInputRef.current.value = userDetails.email || "";
       mobileInputRef.current.value = userDetails.mobile || ""; // Fallback for undefined
-      setProfile(userDetails.profile ? `http://localhost:2019/${userDetails.profile}` : "./images/no-pic3.png");
+      setProfile(userDetails.profile ? `/${userDetails.profile}` : "./images/no-pic3.png");
 
   }, []);
 

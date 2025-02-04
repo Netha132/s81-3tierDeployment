@@ -13,7 +13,7 @@ function DeleteProfile() {
   })
 
   useEffect(()=>{
-    axios.defaults.baseURL="http://localhost:2019";
+    axios.defaults.baseURL="";
   },[])
 
   let deleteProfile = async()=>{

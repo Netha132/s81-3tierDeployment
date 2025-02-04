@@ -15,7 +15,7 @@ function Signup() {
   let navigate = useNavigate();
 
   useEffect(()=>{
-    axios.defaults.baseURL="http://localhost:2019";
+    axios.defaults.baseURL="";
 
     axios.defaults.headers.common['Authorization'] = localStorage.getItem("token");
   })

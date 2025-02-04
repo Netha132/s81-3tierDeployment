@@ -11,7 +11,7 @@ function Login() {
   let dispatch = useDispatch();
 
   useEffect(()=>{
-    axios.defaults.baseURL="http://localhost:2019";
+    axios.defaults.baseURL="";
     if(localStorage.getItem("token")){
       // onvalidateToken();
       axios.defaults.headers.common['Authorization'] = localStorage.getItem("token");
