@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* .App {
+  text-align: center;
+} */
+
+.homePage{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.backgroundImage {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.buttonContainer {
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: flex;
+  gap: 10px; 
+}
+
+.overlayButton {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, #030303, #141413, #000000);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlayButton:hover {
+ background: linear-gradient(90deg, #131313, #2e2e2e, #202020);
+}
+.loginBG{
+  background-image: url("../public/images/eclipseSpirits.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.loginForm{
+  display: inline-block;
+  /* border: 2px solid #000; */
+  background-color: #545454ba;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 5px #000;
+  animation: slideLeft 0.5s ease-in-out;
+}
+.signupBG{
+  background-image: url("../public/images/eclipseSpirits.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.signupForm{
+  display: inline-block;
+  /* border: 2px solid #000; */
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #545454ba;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 5px #000;
+  animation: slideRight 0.5s ease-in-out;
+}
+@keyframes slideRight {
+  from{
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(-0%);
+    opacity: 1;
+  }
+}
+.signupInputs{
+  display: inline-block;
+  width: 250px;
+  background-color: #403f3f4a;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 10px;
+}
+.signupInputs::placeholder{
+  color: #fff;
+}
+/* .genderDiv{
+  width: 100px;
+}
+.genderInputs{
+  display: inline-block;
+}
+.genderRadio{
+  display: inline-block;
+} */
+
+.selectGender{
+  width: 270px;
+  background-color: #403f3f4a;
+  text-align: left;
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.genderOption{
+  color: #626161;
+}
+.signupBtn{
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #1b1a1a;
+  color: #ffffff;
+  cursor: pointer;
+}
+.loginInput{
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background-color: #403f3f4a;
+  color: #fff;
+}
+.loginInput::placeholder{
+  color: #fff;
+}
+.loginBtn{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius:5px ;
+  background-color: #1b1a1a;
+  color: #ffffff;
+  cursor: pointer;
+}
+@keyframes slideLeft {
+  from{
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.navBar {
+  display: flex;
+  gap: 20px;
+  background: #434343ba;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 5px #000;
+  padding: 15px;
+}
+
+.navLinks {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.navLinks::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Change underline color */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.navLinks:hover::after,
+.navLinks.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.accountDetails{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px 10px ;
+  background-color: #828282;
+  cursor: pointer;
+  animation: slideRight 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.accountDetails:hover{
+  transform: scale(1.03);
+}
+
+@keyframes slideRight {
+  from{
+    transform:translateX(-50%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.profileImg{
+  width: 250px;
+  height: 200px;
+  border-radius: 10px 30px; 
+  transition: 0.3s ease-in-out;
+}
+.profileImg:hover{
+  transform: scale(1.1);
+}
+.profileDetailsDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.profilePicDiv{
+  background-color: #6e6d6d;
+  padding: 5px;
+  border-radius: 10px 30px;
+  margin: 20px;
+  animation: slideLeft 0.5s ease-in-out;
+}
+@keyframes slideLeft {
+  from{
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.editProfileDiv{
+  background-color: #686868;
+  padding: 10px;
+}
+.editProfileLink{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.editProfileFrom{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.editProfileInputDiv{
+  margin: 10px;
+}
+.editProfileInput{
+  width: 50%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  border-radius: 3px;
+}
+.animeInput1{
+  animation: slideRight 0.2s ease-in-out;
+}
+.animeInput2{
+  animation: slideRight 0.3s ease-in-out;
+}
+.animeInput3{
+  animation: slideRight 0.4s ease-in-out;
+}
+.animeInput4{
+  animation: slideRight 0.5s ease-in-out;
+}
+.animeInput5{
+  animation: slideRight 0.6s ease-in-out;
+}
+.animeInput6{
+  animation: slideRight 0.7s ease-in-out;
+}
+.animeInput7{
+  animation: slideRight 0.8s ease-in-out;
+}
+.animeInput8{
+  animation: slideRight 0.9s ease-in-out;
+}
+@keyframes slideRight {
+  from{
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+.updateProfilePic{
+  width: 150px;
+}
+.updateProfileIcon{
+  width: 20px;
+  margin-right: 10px;
+  filter: invert(1);
+  padding-top:4px ;
+}
+.errorIcon{
+  width: 100px;
+}
+.deleteProfileContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.deleteProfileDiv{
+  display: inline-block;
+  padding: 10px;
+  background-color: #c7c6c6;
+  width: 40%;
+  margin: 20px;
+  border-radius: 10px;
+  animation: popup 0.4s ease-in-out;
+}
+@keyframes popup {
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+.deleteButtonDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.yesBtn{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: red;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.yesBtn:active{
+  background-color: rgb(223, 1, 1);
+}
+.noBtn{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: green;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.noBtn:active{
+  background-color: rgb(1, 97, 1);
+}
+.deleteProfileIcon{
+  width: 20px;
+  filter: invert(1);
+  margin-right: 10px;
+}
+.deleteProfileLinkDiv{
+  background-color: #686868;
+  margin-top:10px ;
+  padding: 10px;
+}
+.deleteProfileLink{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
